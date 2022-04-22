@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1695px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btn--base {
+  padding: 16px 23px;
+  background-color: #CDA861;
+  box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2);
+  border-radius: 50px;
+  color: #34383D;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn--white {
+  padding: 16px 23px;
+  box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2);
+  border: 2px solid #CDA861;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header */
+.header {
+  height: 100vh;
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 37px;
+  padding-bottom: 80px;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top-btn {
+  margin-left: 20px;
+}
+
+.header__top-bio {
+  display: flex;
+  align-items: center;
+}
+
+.header__top-info {
+  margin-left: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #34383D;
+}
+
+.header__top-phone {
+  padding-left: 40px;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #34383D;
+}
+
+.header__top-phone::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/header-phone.svg");
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header__bottom {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__bottom-right {
+  display: flex;
+  align-items: center;
+}
+
+.header__bottom-icon {
+  margin-left: 50px;
+}
+
+/* Navbar */
+.navbar__list {
+  display: flex;
+}
+
+.navbar__list-item {
+  margin-left: 50px;
+}
+
+.navbar__list-link {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #34383D;
+  padding-bottom: 10px;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.navbar__list-link::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 3px;
+  bottom: 0;
+  background-color: #CDA861;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s;
+}
+
+.navbar__list-link::after {
+  content: '';
+  position: absolute;
+  margin-left: 20px;
+  width: 0px;
+  height: 3px;
+  bottom: 0;
+  background-color: #CDA861;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all .5s;
+}
+
+.navbar__list-link:hover {
+  opacity: 1;
+  transition: all .5s;
+}
+
+.navbar__list-link:hover::before {
+  width: 30px;
+}
+
+.navbar__list-link:hover::after {
+  width: 7px;
+  transition: all .5s;
+}
+
+.navbar__list-link.navbar__item--active {
+  color: #34383D;
+  opacity: 1;
+}
+
+/* Main */
+.main {
+  padding-top: 190px;
+}
+
+.main__inner-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 76px;
+  line-height: 93px;
+  color: #34383D;
+  width: 660px;
+}
+
+.main__inner-title span {
+  color: #CDA861;
+  text-decoration: underline;
+}
+
+.main__inner-text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #34383D;
+  width: 489px;
+}
+
+.main__inner-btn {
+  display: inline-block;
+  margin-top: 20px;
+  transition: all .5s;
+}
+
+.main__inner-btn:hover {
+  transform: scale(1.1);
+  transform: translateY(-10px);
+  transition: all .5s;
+}
+
+/* About-us */
+.about-us {
+  margin-top: 80px;
+}
+/*# sourceMappingURL=style.css.map */

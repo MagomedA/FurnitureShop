@@ -1,0 +1,196 @@
+body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+h1,h2,h3,h4,h5,h6
+    margin: 0
+    padding: 0
+
+a
+    text-decoration: none
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+li
+    margin: 0
+    padding: 0
+
+$dark-color: #34383D
+$base-color: #CDA861
+$montserrat: 'Montserrat', sans-serif
+
+.container
+    max-width: 1695px
+    margin: 0 auto
+    padding: 0 15px
+.btn--base
+    padding: 16px 23px
+    background-color: #CDA861
+    box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2)
+    border-radius: 50px
+    color: $dark-color
+    font-weight: 700
+    font-size: 22px
+    line-height: 27px
+    font-family: $montserrat
+.btn--white
+    padding: 16px 23px
+    box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2)
+    border: 2px solid $base-color
+    border-radius: 50px
+    color: #fff
+    font-weight: 700
+    font-size: 22px
+    line-height: 27px
+.text-center
+    text-align: center
+/* Header */
+
+.header
+    height: 100vh
+    background-image: url('../img/bg.jpg')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    padding-top: 37px
+    padding-bottom: 80px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-btn
+            margin-left: 20px
+        &-bio
+            display: flex
+            align-items: center
+        &-info
+            margin-left: 60px
+            font-family: $montserrat
+            font-style: italic
+            font-weight: 500
+            font-size: 22px
+            line-height: 26px
+            color: $dark-color
+        &-phone
+            padding-left: 40px
+            position: relative
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 22px
+            line-height: 26px
+            color: $dark-color
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/header-phone.svg')
+                background-repeat: no-repeat
+                width: 30px
+                height: 30px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+    &__bottom
+        padding-top: 50px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &-right
+            display: flex
+            align-items: center
+        &-icon
+            margin-left: 50px
+
+
+/* Navbar */
+
+.navbar
+    &__list
+        display: flex
+        &-item
+            margin-left: 50px
+        &-link
+            position: relative
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 22px
+            line-height: 26px
+            color: $dark-color
+            padding-bottom: 10px
+            opacity: 0.6
+            transition: all 0.5s
+            &::before
+                content: ''
+                position: absolute
+                width: 0px
+                height: 3px
+                bottom: 0
+                background-color: $base-color
+                border-radius: 5px
+                left: 50%
+                transform: translateX(-50%)
+                transition: all .5s
+            &::after
+                content: ''
+                position: absolute
+                margin-left: 20px
+                width: 0px
+                height: 3px
+                bottom: 0
+                background-color: $base-color
+                border-radius: 5px
+                left: 50%
+                transform: translateX(-50%)
+                transition: all .5s
+            &:hover
+                opacity: 1
+                transition: all .5s
+                &::before
+                    width: 30px
+                &::after
+                    width: 7px
+                    transition: all .5s
+
+.navbar__list-link.navbar__item--active
+    color: $dark-color
+    opacity: 1
+
+/* Main */
+
+.main
+    padding-top: 190px
+    &__inner
+        &-title
+            font-family: $montserrat
+            font-weight: 600
+            font-size: 76px
+            line-height: 93px
+            color: $dark-color
+            width: 660px
+            span
+                color: $base-color
+                text-decoration: underline
+        &-text
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 22px
+            line-height: 26px
+            color: $dark-color
+            width: 489px
+        &-btn
+            display: inline-block
+            margin-top: 20px
+            transition: all .5s
+            &:hover
+                transform: scale(1.1)
+                transform: translateY(-10px)
+                transition: all .5s
+
+
+/* About-us */
+
+.about-us
+    margin-top: 80px
