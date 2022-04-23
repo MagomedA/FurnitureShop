@@ -28,7 +28,8 @@ $montserrat: 'Montserrat', sans-serif
     margin: 0 auto
     padding: 0 15px
 .btn--base
-    padding: 16px 23px
+    display: inline-block
+    padding: 16px 40px
     background-color: #CDA861
     box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2)
     border-radius: 50px
@@ -37,8 +38,10 @@ $montserrat: 'Montserrat', sans-serif
     font-size: 22px
     line-height: 27px
     font-family: $montserrat
+    transition: all .5s
 .btn--white
-    padding: 16px 23px
+    display: inline-block
+    padding: 16px 40px
     box-shadow: 0px 5px 10px rgba(52, 56, 61, 0.2)
     border: 2px solid $base-color
     border-radius: 50px
@@ -46,8 +49,19 @@ $montserrat: 'Montserrat', sans-serif
     font-weight: 700
     font-size: 22px
     line-height: 27px
-.text-center
-    text-align: center
+    transition: all .5s
+.section__title
+    display: inline-block
+    padding-bottom: 5px
+    border-bottom: 3px solid $base-color
+    font-family: $montserrat
+    font-weight: 600
+    font-size: 30px
+    line-height: 37px
+    color: $dark-color
+    text-transform: uppercase
+.our__item--bg
+    background-color: $base-color
 /* Header */
 
 .header
@@ -103,7 +117,6 @@ $montserrat: 'Montserrat', sans-serif
             align-items: center
         &-icon
             margin-left: 50px
-
 
 /* Navbar */
 
@@ -189,8 +202,495 @@ $montserrat: 'Montserrat', sans-serif
                 transform: translateY(-10px)
                 transition: all .5s
 
+/* About */
 
-/* About-us */
-
-.about-us
+.about
     margin-top: 80px
+    &__title
+        font-family: $montserrat
+        font-weight: 600
+        font-size: 76px
+        line-height: 93px
+        color: $dark-color
+        width: 461px
+    &__text
+        padding-bottom: 25px
+        font-weight: 500
+        font-size: 22px
+        line-height: 26px
+        color: $dark-color
+        width: 513px
+    &__btn
+        &:hover
+            transform: scale(1.1)
+            transform: translateY(-10px)
+            transition: all .5s
+    &__inner
+        position: relative
+        display: flex
+        align-items: center
+        background: rgba(205, 168, 97, 0.1)
+        box-shadow: 0px 14px 44px rgba(0, 0, 0, 0.03)
+        border-radius: 50px
+        &-content
+            margin-left: 80px
+        &-chair
+            margin-top: 100px
+        &-item
+            position: absolute
+            bottom: -80px
+            left: -80px
+
+/* Products */
+
+.products
+    position: relative
+    margin: 80px 0
+    padding: 80px 0
+    &-item
+        width: 289px
+        position: absolute
+        right: 0
+    &__info
+        text-align: center
+    &__text
+        font-weight: 500
+        font-size: 22px
+        line-height: 26px
+    &__slider
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding: 0 80px
+        &-item
+            margin: 0 auto
+            margin-top: 100px
+            width: 257px
+            text-align: center
+            cursor: pointer
+        &-star
+            display: flex
+            justify-content: center
+            margin-top: 22px
+        &-price
+            margin-top: 20px
+            font-family: $montserrat
+            font-weight: 700
+            font-size: 26px
+            line-height: 32px
+            color: $dark-color
+        &-text
+            margin: 0 auto
+            width: 257px
+            padding-bottom: 20px
+            font-weight: 400
+            font-size: 18px
+            line-height: 21px
+            font-family: $montserrat
+            color: $dark-color
+        &-btn
+            font-family: $montserrat
+            font-weight: 700
+            color: $dark-color
+            border: 2px solid $base-color
+            padding: 14px 45px
+            border-radius: 50px
+            font-size: 18px
+            line-height: 22px
+            transition: all .5s
+        &-el
+            margin: 0 auto
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            font-weight: 500
+            font-size: 24px
+            line-height: 28px
+            font-weight: bold
+            padding-bottom: 15px
+            color: $dark-color
+            font-family: $montserrat
+            width: 257px
+            height: 119px
+            background-color: #F2F1F1
+            border-radius: 30px
+            transition: all .5s
+            img
+                position: absolute
+                top: -50px
+                left: 50%
+                transform: translateX(-50%)
+
+.products__slider-item
+    &:hover
+        .products__slider-btn
+            background-color: $base-color
+        .products__slider-el
+            background-color: $base-color
+
+/* Slick js*/
+
+.slick-slide
+    overflow: visible
+    height: 337px
+    box-sizing: border-box
+
+.slick-prev
+    position: absolute
+    width: 47px
+    height: 47px
+    font-size: 0
+    padding: 19px 17px
+    border: none
+    background-color: $base-color
+    border-radius: 50%
+    top: 50%
+    left: 0
+    z-index: 10
+    cursor: pointer
+    &::before
+        content: ''
+        position: absolute
+        background-image: url('../img/prev.svg')
+        background-repeat: no-repeat
+        width: 12px
+        height: 12px
+        left: 50%
+        transform: translateX(-50%)
+        top: 40%
+.slick-next
+    position: absolute
+    width: 47px
+    height: 47px
+    font-size: 0
+    padding: 19px 17px
+    border: none
+    background-color: $base-color
+    border-radius: 50%
+    top: 50%
+    right: 0
+    z-index: 10
+    cursor: pointer
+    &::after
+        content: ''
+        position: absolute
+        background-image: url('../img/next.svg')
+        background-repeat: no-repeat
+        width: 12px
+        height: 12px
+        left: 55%
+        transform: translateX(-50%)
+        top: 40%
+
+/* Special */
+
+.special
+    position: relative
+    margin: 0 auto
+    width: 1520px
+    background-image: url('../img/special-bg.png')
+    background-repeat: no-repeat
+    padding: 60px 0 460px 0
+    &-img
+        position: absolute
+        left: -259px
+        bottom: -115px
+    &-img2
+        position: absolute
+        right: -206px
+        top: -100px
+    &__title
+        font-family: $montserrat
+        font-weight: 600
+        font-size: 30px
+        line-height: 37px
+    &__inner
+        text-align: center
+    &__items
+        padding: 30px 0
+        display: flex
+        justify-content: center
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin: 0 40px
+        &-figure
+            width: 66px
+            height: 66px
+            display: flex
+            justify-content: center
+            align-items: center
+            border: 1px solid #F3E9E9
+            border-radius: 50%
+            font-family: $montserrat
+            font-weight: 600
+            font-size: 24px
+            line-height: 29px
+        &-text
+            padding-top: 5px
+            font-family: $montserrat
+            font-style: italic
+            font-size: 16px
+            line-height: 20px
+            font-weight: bold
+    &__btn
+        &:hover
+            transform: scale(1.1)
+            transform: translateY(-10px)
+            transition: all .5s
+
+/* Our */
+
+.our
+    margin: 80px 0
+    padding: 80px 0
+    &__inner
+        text-align: center
+    &__text
+        padding-top: 20px
+        font-family: $montserrat
+        font-weight: 500
+        font-size: 22px
+        line-height: 26px
+        color: $dark-color
+    &__border
+        position: relative
+        width: 100px
+        height: 100px
+        padding: 15px
+        margin: 0 60px
+        border-radius: 50%
+        border: 2px solid $dark-color
+        &:nth-child(1)
+            &::after
+                content: ''
+                position: absolute
+                width: 100px
+                height: 2px
+                background-color: $dark-color
+                right: -112px
+                top: 50%
+        &:last-child
+            &::before
+                content: ''
+                position: absolute
+                width: 100px
+                height: 2px
+                background-color: $dark-color
+                left: -112px
+                top: 50%
+    &__items
+        margin: 50px 0
+        display: flex
+        justify-content: center
+    &__item
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 100px
+        font-family: $montserrat
+        font-weight: 500
+        font-size: 18px
+        line-height: 21px
+        height: 100px
+        border-radius: 50%
+        background: rgba(52, 56, 61, 0.2)
+    &__slider
+        display: flex
+        justify-content: space-between
+        padding: 0 80px
+        &-item
+            text-align: center
+            width: 246px
+            padding: 48px 55px
+            border: 2px dashed rgba(52, 56, 61, 0.5)
+            border-radius: 200px 200px 20px 20px
+            &-img
+                width: 200px
+                height: 200px
+        &-info
+            display: flex
+            margin-top: 15px
+            justify-content: space-between
+            align-items: center
+            text-align: right
+        &-cart
+            display: flex
+            justify-content: center
+            align-items: center
+            width: 47px
+            height: 47px
+            background-color: $base-color
+            border-radius: 50%
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            transition: all .5s
+            &:hover
+                transform: scale(1.1)
+                transform: translateY(-10px)
+                transition: all .5s
+
+        &-title
+            margin-bottom: 10px
+            font-family: $montserrat
+            font-weight: bold
+            font-size: 22px
+            line-height: 26px
+            color: $dark-color
+        &-text
+            position: relative
+            display: inline-block
+            font-family: $montserrat
+            font-weight: bold
+            font-size: 20px
+            transform: translateX(-48px)
+            line-height: 23px
+            color: $dark-color
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/our-star.svg')
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                left: -30px
+        &-price
+            position: relative
+            margin-top: 30px
+            font-family: $montserrat
+            font-weight: bold
+            font-size: 30px
+            line-height: 35px
+            text-align: center
+.our__item.our__item--bg
+    background-color: $base-color
+
+/* Advantages */
+
+.advantages
+    position: relative
+    margin-top: 435px
+    &-img
+        position: absolute
+        top: -350px
+        left: 50%
+        transform: translateX(-50%)
+    &__inner
+        display: flex
+        padding: 120px 0
+        justify-content: center
+        align-items: center
+        background: rgba(205, 168, 97, 0.19)
+        border-radius: 30px
+        &-item
+            display: flex
+            align-items: center
+            margin: 0 150px
+        &-text
+            margin-left: 10px
+        &-title
+            font-family: $montserrat
+            font-weight: 500
+            color: black
+            font-size: 20px
+            line-height: 23px
+        &-span
+            font-family: $montserrat
+            font-style: normal
+            font-weight: 400
+            font-size: 14px
+            line-height: 16px
+
+/* Blog */
+
+.blog
+    position: relative
+    margin: 80px 0
+    padding: 80px 0
+    &__item
+        position: absolute
+        top: 47%
+        left: -20px
+        &-bg
+            position: absolute
+            width: 1036px
+            height: 604px
+            background: #F5EEE1
+            border-radius: 0px 100px 100px 0px
+            margin-left: 120px
+            bottom: 150px
+            z-index: -1
+    &__item2
+        position: absolute
+        right: 100px
+        top: 9%
+        z-index: -1
+    &__info
+        text-align: center
+    &__inner
+        display: flex
+        margin-top: 35px
+        justify-content: space-evenly
+        flex-wrap: wrap
+        &-item
+            display: flex
+            width: 585px
+            padding: 270px 0 20px 50px
+            border-radius: 50px
+            margin-bottom: 115px
+            background-repeat: no-repeat
+            background-size: cover
+        &-top
+            display: flex
+            align-items: center
+        &-title
+            position: relative
+            margin-right: 15px
+            padding-left: 30px
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 14px
+            color: #fff
+            line-height: 16px
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/calendar.svg')
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+        &-span
+            position: relative
+            padding-left: 30px
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 14px
+            color: #fff
+            line-height: 16px
+            &::before
+                content: ''
+                position: absolute
+                background-image: url('../img/comment.svg')
+                background-repeat: no-repeat
+                width: 20px
+                height: 20px
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+        &-text
+            margin: 10px 0
+            font-family: $montserrat
+            font-weight: 500
+            color: #fff
+            font-size: 36px
+            line-height: 42px
+        &-more
+            font-family: $montserrat
+            font-weight: 500
+            font-size: 20px
+            line-height: 23px
+            color: rgba(255, 255, 255, 0.8)
